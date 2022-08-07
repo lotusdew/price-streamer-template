@@ -1,0 +1,16 @@
+<h1>Login in</h1>
+<h1>Show User</h1>
+<!-- New session i.e. login -->
+
+   <%= form_for @conn, Routes.login_path(@conn, :login), [method: :post, as: :phone_no], fn f -> %>
+
+  <%= label f, :phone_no %>
+  <%= telephone_input f, :phone_no, required: true %>
+  <%= error_tag f, :phone_no %>
+
+    <div  class="form-group">
+        <%= submit "Continue"%>
+    </div>
+
+<% end %>
+

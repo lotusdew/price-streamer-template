@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <section class="topSection">
+        <div class="dropdownSection">
+        <div class="spreadContainer">
+          <div>
+            <span>Spread Type</span>
+          </div>
+          <div>
+            <span>spread ID</span>
+          </div>
+        </div>
+         <div class="dropdown">
+          <button
+            type="button"
+            class="sprdButton"
+          >
+            Select Spread
+          </button>
+        </div>
+        </div>
+       <section class="pnlSection">
+        <div class="headSection">
+          <div class="cardsContainer">
+            <div class="upperCard">
+                <div class="card">Executed Level :</div>
+                <div class="cardValue">
+                  <%# avgSpread[spreadId] || "-" %>
+                </div>
+              </div>
+              <div class="upperCard">
+                <div class="cardTitle">Total Realised PNL :</div>
+                <div class="cardValue">
+                  <%# round(TotalRealizedPnl, 2) || "-"" %>
+                </div>
+              </div>
+              <div class="upperCard">
+                <div class="cardTitle">Realised PNL </div>
+                <div class="cardValue">
+                  <%# "round(realizedPnl, 2) || "-"" %>
+                </div>
+              </div>
+              <div class="upperCard">
+                <div class="cardTitle">Total Daily PNL :</div>
+                <div class="cardValue">
+                  <%# "round(TotalDailyPnl, 2) || "-"" %>
+                </div>
+              </div>
+              <div class="upperCard">
+                <div class="cardTitle">Daily PNL </div>
+                <div class="cardValue">
+                  <%# "round(dailyPnl, 2) || "-"" %>
+                </div>
+              </div>
+              <div class="upperCard">
+                <div class="cardTitle">Net Positions :</div>
+                <div class="cardValue">
+                <%# "netPositions[spreadId] || "-"" %>
+                </div>
+              </div>
+
+              <div class="upperCard">
+                <div class="cardTitle">Total Un Realised PNL :</div>
+                <div class="cardValue">
+                  <%# "round(TotalUnRealizedPnl, 2) || "-"" %>
+                </div>
+              </div>
+              <div class="upperCard">
+                <div class="cardTitle">Un Realised PNL </div>
+                <div class="cardValue">
+                  <%# "round(unRealizedPnl, 2) || "-"" %>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+      </section>
+      <section>
+      <div class="LevelContainer">
+          <div class="Level">
+          <div class="heading">
+            Level :
+            </div>
+            <div class="levelValue">
+            <%# level?.toFixed(2)" %>
+            </div>
+        </div>
+
+        </div>
+      </section>
+      <section class="contentSection">
+      <div class="TableSection">
+        <table>
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Value</th>
+            <th>Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BOT : SOLD</td>
+                <td>spread value</td>
+                <td>time</td>
+            </tr>
+        </tbody>
+      </table>
+      </div>
+      <div>
+        Chart
+      <div>
+    </section>
+    <section>
+    <div class="btn-container">
+        <button>
+          Sell
+        </button>
+        <button>
+          Buy
+        </button>
+      </div>
+    </section>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,350 @@
+/* This file is for your main application CSS */
+@import "./phoenix.css";
+
+/* Alerts and form errors used by phx.new */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert p {
+  margin-bottom: 0;
+}
+.alert:empty {
+  display: none;
+}
+.invalid-feedback {
+  color: #a94442;
+  display: block;
+  margin: -1rem 0 2rem;
+}
+
+/* LiveView specific classes for your customization */
+.phx-no-feedback.invalid-feedback,
+.phx-no-feedback .invalid-feedback {
+  display: none;
+}
+
+.phx-click-loading {
+  opacity: 0.5;
+  transition: opacity 1s ease-out;
+}
+
+.phx-loading{
+  cursor: wait;
+}
+
+.phx-modal {
+  opacity: 1!important;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.phx-modal-content {
+  background-color: #fefefe;
+  margin: 15vh auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.phx-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.phx-modal-close:hover,
+.phx-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fade-in-scale {
+  animation: 0.2s ease-in 0s normal forwards 1 fade-in-scale-keys;
+}
+
+.fade-out-scale {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-out-scale-keys;
+}
+
+.fade-in {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-in-keys;
+}
+.fade-out {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-out-keys;
+}
+
+@keyframes fade-in-scale-keys{
+  0% { scale: 0.95; opacity: 0; }
+  100% { scale: 1.0; opacity: 1; }
+}
+
+@keyframes fade-out-scale-keys{
+  0% { scale: 1.0; opacity: 1; }
+  100% { scale: 0.95; opacity: 0; }
+}
+
+@keyframes fade-in-keys{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-out-keys{
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown{
+	display: flex;
+	align-items: center;
+    border: 1px solid gray;
+    padding: 2%;
+    border-radius: 4px;
+    background-color: #07877b;
+    color: #ffffff;
+}
+
+.sprdButton{
+  display: flex;
+  align-items: center;
+  margin-right: 1.2%;
+  background-color: transparent;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+  color: #fff;
+  border:none;
+}
+
+
+.spreadContainer{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding:1rem;
+  font-size:1.1em ;
+  width: 100%;
+  margin-bottom:1rem;
+  font-weight: 600; 
+}
+
+
+
+.container{
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1%
+}
+
+.spread-container{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding:1rem;
+  font-size:1.1em ;
+  width: 100%;
+  margin-bottom:1rem;
+  font-weight: 600;
+}
+
+.dropdownSection{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 10%;
+}
+
+.pnlSection{
+  width: 88%;
+}
+
+.tabContainer {
+  width: 100%;
+
+  margin-top: 1%;
+}
+
+
+  .disabledWrapper{
+
+    cursor: not-allowed !important;
+  }
+  .disabled{
+    
+    cursor: not-allowed !important;
+    pointer-events: all !important;
+    background-color: rgba(141, 141, 141, 0.741);
+    color: rgb(130, 130, 130);
+  }
+
+.selected{
+    border-bottom:2px solid #008B8B;
+      color: #008B8B;
+}
+.chartSection{
+  display: flex;
+}
+.cardsContainer{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding:1.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+width: 100%;
+
+}
+
+.card{
+  
+  flex: 0 0 18%;  
+}
+.upperCard:not(:last-child){
+  border-right: 1px solid #d5d5d5;
+}
+.upperCard{
+
+  padding: 0 1%;
+  width: 15%;
+}
+  .cardTitle{
+color:  #aeaeae;;
+
+font-weight: 500;
+font-size: .9em;
+  }
+  .cardValue{
+    font-weight: 600;
+font-size: 1.7em;
+color: #000000;
+  }
+
+
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.cardValue{
+  font-weight: 400;
+  font-size:1.6em;
+}
+.cardTitle{
+  font-weight: 600;
+  font-size:1em;
+}
+.headSection{
+  display: flex;
+   justify-content: space-around;
+  flex-direction: column;
+}
+.spreadBox{
+  display: flex;
+  align-items: center;
+ margin-left: 10%;
+ margin-right: 10%;
+ 
+  width: 80%;
+  padding: 1%;
+  border: 1px solid gray;
+}
+
+.contentSection{
+  display: flex;
+  margin-top: 1%;
+  justify-content: space-around;
+  align-items: center;
+}
+.TableSection{
+  flex: 0 0 20%;
+  text-align: center !important;
+	}
+ 
+  .green{
+    color: #009999;
+    font-weight: 600;
+  }
+  .red{
+    color: #CD5C5C;
+    font-weight:600;
+  }
+ td{
+   text-align: center !important;
+   vertical-align: middle !important;
+ }
+
+.TableSection > div:first-child{
+  max-height: 65vh !important;
+}
+.LevelContainer{
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 2%;
+}
+.Level{
+  font-size: 1.5em;
+  font-weight: 600;
+  border-bottom:2px solid #008B8B;
+ align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 10%;
+}
+  .levelValue{
+    text-align: right;
+  }
+
+.topSection{
+  display: flex;
+  align-items: center;
+  padding-left: 1%;
+  justify-content: space-between;
+  padding-right: 1%;
+}
+.upperPart{
+  display: flex;
+  align-items: center;
+}
+.pnlContainer{
+  width: 88%;
+}
+.innerCard{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+ 
+}

@@ -1,0 +1,13 @@
+<!-- New session i.e. login -->
+   <%= form_for @conn, Routes.login_path(@conn, :verify_otp), [method: :post, as: :otp], fn f -> %>
+
+  <%= label f, :otp %>
+  <%= telephone_input f, :otp, required: true %>
+  <%= error_tag f, :otp %>
+
+    <div  class="form-group">
+        <%= submit "Login"%>
+    </div>
+
+<% end %>
+
